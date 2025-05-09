@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/logo.png" alt="logo.png"></a>
+            <ul>
+                <li><a href="#">Om os</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="dana"><img src="img/dana.png" alt="dana.png"></section>
+        <section class="scenes">
+            <!-- Introduktion -->
+            <div id="scene0">
+                <h1>Datasikkerhed</h1>
+                <p>Er du opmærksom på datasikkerhed? Denne interaktive oplevelse vil føre dig gennem nogle forskellige scenarier, hvor du bliver bedt om at træffe nogle valgt, for at beskytte dine oplysninger. Træf dine valg med omhu, og se hvor godt du klarer dig. </p>
+                <p>Du står inde på din yndlingscafé og har netop bestilt en café latte, og tjekker derfor din telefon i mellemtiden. Du sørger for at logge på caféens gratis wifi-netværk, for at undgå at bruge dit eget mobildata.</p>
+                <button id="b0">Begynd</button>
+            </div>
+            <!-- Scene 1 -->
+            <div id="scene1" class="hidden">
+                <p>Du har modtaget en mail fra den streamingstjeneste du benytter dig af, hvori de beskriver en manglende betaling for denne måned. Hvad gør du?</p>
+                <button id="b1">Trykker på linket</button>
+                <button id="b2">Tjekker afsenderen</button>
+            </div>
+            <!-- Negativ feedback-->
+            <div id="negativ" class="hidden">
+                <p>Beklager! dine data er blevet lækket.</p>
+                <p>Når du ikke sikrer dig, at afsenderen ser legit ud, kan du overse at det faktisk er en scam-side, og afgive dine personlige data, til folk som vil misbruge dem.</p>
+                <button id="restart">Vil du prøve igen?</button>
+            </div>
+            <!-- Scene 2 -->
+            <div id="scene2" class="hidden">
+                <p>Godt valg! Det er altid en rigtig god idé at tjekke afsenderen, især når det drejer sig om betalingsoplysninger.</p>
+                <p>Nu hvor du har sikret dig, at afsenderen ser legit ud, trykker du ind på linket. Det leder dig hen til en side hvor du bliver bedt om at indtaste dine kortoplysninger. Hvad gør du?</p>
+                <button id="b3">Indtaster mine oplysninger</button>
+                <button id="b4">Ringer til den respektive streamingstjeneste og beder om forklaring.</button>
+            </div>
+            <!-- Positiv feedback -->
+            <div id="positiv" class="hidden">
+                <p>Sådan! Du har sikret dig korrekt.</p>
+                <p>Du har taget alle dine forbehold og sikret dig på bedste vis. Dette ved at sikre dig at afsenderen af mailen så rigtig ud, samt at ringe direkte til deres kundeservice, i stedet for at indtaste dine personlige oplysninger. flot klaret!</p>
+                <button id="restart">Vil du prøve igen?</button>
+            </div>
+            <!-- Negativ feedback -->
+            <div id="negativ" class="hidden">
+                <p>Øv øv! dine kortoplysninger er nu blevet lækket til en scam-side.</p>
+                <p>Når du skal indtaste personlige oplysninger er det vigtigt at sikre sig, at den hjemmeside der efterspørg dem, ikke er falsk. For det første, så er du logget på caféens wifi-netværk, hvilket kan medføre et såkaldt "man-in-the-middle-angreb". Det vil sige, at personer kan lytte med på trafikken mellem dig og den hjemmeside, du indtaster dine kortoplysninger på, og derfor stjæle oplysningerne. Derudover, er det vigtigt at kontakte streamningstjenesten direkte, selvom e-mail afsenderen ser ægte ud, da det er aldrig en god idé at indtaste sine kortoplysninger gennem et tilsendt link, uden at have fået besked herom, først. </p>
+                <button id="restart">Vil du prøve igen?</button>
+            </div>
+        </section>   
+    </main>
+    <footer>
+        <p>Morpheus Guard</p>
+        <p>Tlf: <a href="+4512345678">+4512345678</a></p>
+        <p>E-mail: <a href="mail@morpheusguard.dk">mail@morpheusguard.dk</a></p>
+    </footer>
+</body>
+</html>

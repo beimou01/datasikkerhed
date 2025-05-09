@@ -1,0 +1,126 @@
+@use 'partial';
+
+/*Generel styling*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: partial.$background-color;
+    font-family: courier new, sans-serif;
+}
+
+h1{
+    font-weight: 500;
+    color: partial.$btn-color;
+    font-size: 48px;
+}
+
+img{
+    max-width: 100%;
+}
+
+p{
+    color: partial.$btn-color;
+    font-size: 16px;
+}
+
+/*Navigation*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6em;
+    background-color: partial.$primary-color;
+    padding: partial.$padding;
+        img{
+            height: 5em;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+        }
+
+        li{
+            padding: partial.$padding;
+            font-size: 2em;
+        }
+
+        a{
+            text-decoration: none;
+            color: #42da47;
+        }
+
+        a:hover{
+            color: #FFFFFF;
+        }
+}
+
+/* Hovedindhold */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .dana{
+        padding: 2em;
+        -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+        mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        img{
+            max-width: 40em;
+            object-fit: cover;
+        }
+    }  
+    .scenes{
+        padding: 2em;
+        max-width: 40em;
+    }
+
+    button{
+        @include partial.btn;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+/*Footer*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: partial.$primary-color;
+    height: 5em;
+    justify-content: center;
+    a{
+        text-decoration: none;
+        color: partial.$background-color;
+    }
+    a:hover{
+        color: #42da47;
+    }
+
+}
+
+/*Media queries*/
+
+@media screen and (max-width:799px) {
+    nav{
+        li{
+        font-size: 1.4em;
+        }
+    }
+}
